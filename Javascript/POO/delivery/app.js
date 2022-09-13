@@ -1,24 +1,25 @@
-var ingredientes = ['mel','água','sal','mostarda']
-var modificado = []
+var ingredientes = ['mel', 'água', 'sal', 'mostarda']
 
-for(var i = 0; i < ingredientes.length; i++){
-  var letraInicial = ingredientes[i].charAt(0).toUpperCase()
-  var restoTexto = ingredientes[i].slice(1)
-  var resultado = letraInicial + restoTexto
+function capitalizar(ingredientes) {
+  modificado = []
+  for (var i = 0; i < ingredientes.length; i++) {
+    var letraInicial = ingredientes[i].charAt(0).toUpperCase()
+    var restoTexto = ingredientes[i].slice(1)
+    var resultado = letraInicial + restoTexto
 
-  modificado[i] = resultado
+    modificado[i] = resultado
+  }
+  return modificado
 }
 
-var ordenado = modificado.sort(function(a,b){
-  return a.localeCompare(b)
-})
+function ordenar(ingredientes) {
+  return ingredientes.sort(function (a, b) {
+    return a.localeCompare(b)
+  })
+}
 
-console.log(modificado)
+var resultadoCapitalizar = capitalizar(ingredientes)
+var resultadoOrdenar = ordenar(resultadoCapitalizar)
 
-var nums = [2, 4, 1, 3, 6, 5]
-
-var numOrdem = nums.sort(function(a,b){
-  return a - b
-})
-
-console.log(nums)
+console.log(resultadoCapitalizar)
+console.log(resultadoOrdenar)
