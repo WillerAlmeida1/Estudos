@@ -1,0 +1,12 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "aprendendo nodejs",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Willer",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
