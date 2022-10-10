@@ -1,10 +1,10 @@
 let ingredientes = [
   {
-    nome: 'Alface',
+    nome: 'alface',
     preco: 2.5
   },
   {
-    nome: 'Tomate',
+    nome: 'tomate',
     preco: 3.5
   },
   {
@@ -12,5 +12,27 @@ let ingredientes = [
     preco: 3.5
   }
 ];
+
+
+
+let saladas = [
+  {
+    nome: 'Salada Normal',
+    preco: 1.5,
+    ingredientes:[{
+      ingrediente1: 'Alface',
+      ingrediente2: 'Tomate',
+    }]
+  },
+  {
+    nome: 'Salada Premium',
+    preco: 1.5,
+    ingredientes:[{
+      ingrediente1: 'Alface',
+      ingrediente2: 'Tomate',
+      ingrediente3: 'Cebola'
+    }]
+  }
+]
 
 export default ingredientes;

@@ -1,9 +1,17 @@
 import modificador from "./modificador.js"
-import ingredientes from "./ingredientes.js"
+// import ingredientes from "./ingredientes.js"
 
-console.log(ingredientes);
-console.log(typeof ingredientes);
-console.log(Array.isArray(ingredientes));
+var ingredientes = ['mel', 'água', 'sal', 'mostarda']
+
+modificador.novoCapitalizar(ingredientes, 'nome');
+
+
+
+
+
+// console.log(ingredientes);
+// console.log(typeof ingredientes);
+// console.log(Array.isArray(ingredientes));
 
 // var ingredientes = ['mel', 'água', 'sal', 'mostarda']
 
