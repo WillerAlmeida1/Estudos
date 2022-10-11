@@ -8,3 +8,20 @@ function capitalizeWords(string){
 }
 
 console.log(capitalizeWords('oi bom dia'))
+
+function FnCaixaAlta(vetor) {
+  let modificado = []
+  for (var i = 0; i < vetor.length; i++) {
+    let capsLock = vetor[i].toUpperCase()
+    let resultado = capsLock
+
+    modificado[i] = resultado
+  }
+  return modificado
+}
+
+function FnOrdenar(vetor) {
+  return vetor.sort(function (a, b) {
+    return a.localeCompare(b)
+  })
+}

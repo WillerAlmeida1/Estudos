@@ -1,9 +1,10 @@
 import modificador from "./modificador.js"
 // import ingredientes from "./ingredientes.js"
 
-var ingredientes = ['mel', 'água', 'sal', 'mostarda']
 
-modificador.novoCapitalizar(ingredientes, 'nome');
+var ingredientes = ['mel', 'água', 'sal', 'mostarda']
+modificador.ordenar(ingredientes, 'nome');
+console.log(ingredientes);
 
 
 

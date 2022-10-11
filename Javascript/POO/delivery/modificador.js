@@ -1,22 +1,16 @@
-function FnCapitalizar(vetor) {
-  let modificado = []
-  for (var i = 0; i < vetor.length; i++) {
-    var letraInicial = vetor[i].charAt(0).toUpperCase()
-    var restoTexto = vetor[i].slice(1)
-    var resultado = letraInicial + restoTexto
-
-    modificado[i] = resultado
+function fnOrdenar(colecao, atr){
+  if(typeof colecao[0] == 'object'){
+    return colecao.sort(function (a, b){
+      return a[atr].localeCompare(b[atr])
+    })
+  } else {
+    return colecao.sort(function (a, b){
+      return a.localeCompare(b)
+    })
   }
-  return modificado
 }
 
-function FnOrdenar(vetor) {
-  return vetor.sort(function (a, b) {
-    return a.localeCompare(b)
-  })
-}
-
-function FnCapitalizaNovo(colecao, atributo) {
+function FnCapitalizar(colecao, atributo) {
   if (typeof colecao[0] == 'object') {
     var resultado = colecao.map(function (obj) {
       var letraInicial = obj[atributo].charAt(0).toUpperCase()
@@ -38,21 +32,29 @@ function FnCapitalizaNovo(colecao, atributo) {
   }
 }
 
-function FnCaixaAlta(vetor) {
-  let modificado = []
-  for (var i = 0; i < vetor.length; i++) {
-    let capsLock = vetor[i].toUpperCase()
-    let resultado = capsLock
+function fnCapsLock(colecao, atr){
+  if(typeof colecao[0] == 'object'){
+    var resultado = colecao.map(function(obj){
+      var capsLock = obj[atr].toUpperCase()
+      obj[atr] = capsLock
+      
+      return obj
+    })
+    console.log(resultado)
+  } else {
+    var resultado = colecao.map(function(str){
+      var capsLock = str.toUpperCase()
+      str = capsLock
 
-    modificado[i] = resultado
+      return str
+    })
+    console.log(resultado)
   }
-  return modificado
 }
 
 //export default {capitalizar, ordenar};
 export default {
-  novoCapitalizar: FnCapitalizaNovo,
   capitalizar: FnCapitalizar,
-  ordenar: FnOrdenar,
-  caixaAlta: FnCaixaAlta
+  ordenar: fnOrdenar,
+  caixaAlta: fnCapsLock
 }
